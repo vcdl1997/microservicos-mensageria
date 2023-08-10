@@ -27,7 +27,7 @@ public class ClienteResource {
 	
 	@GetMapping
 	public String status(){
-		log.info("obtendo o status do microsserviço");
+		log.info("obtendo o status do serviço de clientes");
 		return "ok";
 	}
 

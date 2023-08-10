@@ -18,16 +18,19 @@ import io.github.vcdl1997.avaliadorcredito.application.representation.response.P
 import io.github.vcdl1997.avaliadorcredito.application.representation.response.RetornoAvaliacaoClienteResponse;
 import io.github.vcdl1997.avaliadorcredito.application.representation.response.SituacaoClienteResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("avaliacoes-credito")
 @RequiredArgsConstructor
+@Slf4j
 public class AvaliacaoCreditoResource {
 	
 	private final AvaliacaoCreditoService avaliacaoCreditoClienteService;
 
 	@GetMapping
 	public String status() {
+		log.info("obtendo status do serviço de avaliação de credito");
 		return "ok";
 	}
 	

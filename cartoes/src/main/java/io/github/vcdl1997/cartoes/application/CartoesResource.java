@@ -15,10 +15,12 @@ import io.github.vcdl1997.cartoes.application.representation.request.CartaoReque
 import io.github.vcdl1997.cartoes.application.representation.response.CartoesPorClienteResponse;
 import io.github.vcdl1997.cartoes.domain.Cartao;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/cartoes")
 @RequiredArgsConstructor
+@Slf4j
 public class CartoesResource {
 	
 	private final CartaoService cartaoService;
@@ -26,6 +28,7 @@ public class CartoesResource {
 
 	@GetMapping
 	public String status() {
+		log.info("obtendo status do serviço de cartões");
 		return "ok";
 	}
 	
